@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVNETHIVE</title>
+
+    <!-- tailwind css & daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header">
+        <!-- navbar -->
+
+        <div class="navbar bg-base-100 shadow-sm bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] px-15">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Portfolio</a></li>
+                        <li>
+                            <a>Services</a>
+                            <ul class="p-2">
+                                <li><a>Photography</a></li>
+                                <li><a>Videography</a></li>
+                                <li><a>Event Designers</a></li>
+                                <li><a>Hall Booking</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost w-33 h-auto"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 gap-20 ">
+                    <li class="px-3 py-2 rounded-md cursor-pointer">
+                        <a
+                            class="text-lg font-medium text-gray-800 hover:text-white hover:bg-blue-800 hover:font-semibold transition-all duration-200">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="px-3 py-2 rounded-md cursor-pointer">
+                        <a
+                            class="text-lg font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 hover:font-semibold transition-all duration-200">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="px-3 py-2 rounded-md cursor-pointer">
+                        <a
+                            class="text-lg font-medium text-gray-800 hover:text-white hover:bg-blue-800 hover:font-semibold transition-all duration-200">
+                            Portfolio
+                        </a>
+                    </li>
+
+                    <li class="relative px-3 py-2 rounded-md cursor-pointer group">
+                        <details class="group">
+                            <summary
+                                class="text-lg font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 hover:font-semibold transition-all duration-200 rounded-md px-3 py-2 list-none cursor-pointer select-none">
+                                Services
+                            </summary>
+
+                            <ul
+                                class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-lg p-2 hidden group-open:block z-10">
+                                <li><a
+                                        class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200">Photographer</a>
+                                </li>
+                                <li><a
+                                        class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200">Videographer</a>
+                                </li>
+                                <li><a
+                                        class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200">Event
+                                        Designers</a></li>
+                                <li><a
+                                        class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200">Hall
+                                        Booking</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li class="px-3 py-2 rounded-md cursor-pointer">
+                        <a
+                            class="text-lg font-medium text-gray-800 hover:text-white hover:bg-blue-800 hover:font-semibold transition-all duration-200">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a href="login/login.html"
+                    class="inline-block px-5 py-2 rounded-md text-white font-semibold bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] shadow-md transform transition duration-200 hover:scale-105 hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-white/20">Login</a>
+            </div>
+        </div>
+        </header>
+
+        <!-- main section -->
+        <main class="">
+            <section class="relative min-h-[600px] md:min-h-[80vh] overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-[#0A192F] via-[#112240] to-[#0A192F]"></div>
+                <div class="absolute inset-0 opacity-15"
+                    style="background-image: radial-gradient(circle, #4F46E5 1px, transparent 1px); background-size: 12px 12px;">
+                </div>
+
+                <div
+                    class="absolute top-1/4 left-1/4 w-80 h-80 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob">
+                </div>
+                <div
+                    class="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-2000">
+                </div>
+                <div
+                    class="absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-4000">
+                </div>
+
+                <div class="hero relative z-10 min-h-screen items-center">
+                    <div
+                        class="hero-content flex-col lg:flex-row-reverse w-full max-w-7xl mx-auto px-4 py-16 md:px-8 md:py-24">
+
+                        <div class="lg:w-1/2 flex justify-center lg:justify-end relative h-auto">
+                            <div
+                                class="relative w-[300px] md:w-[450px] lg:w-[500px] h-[300px] md:h-[450px] lg:h-[500px] flex items-center justify-center lg:block">
+                                <img src="images/hero image.png" class="rounded-lg shadow-2xl w-full h-full object-cover 
+                            transform rotate-3 scale-105 transition-transform duration-300 ease-in-out
+                            hover:rotate-0 hover:scale-100 lg:absolute **lg:top-0** lg:right-0"
+                                    alt="EventHive Hero Image" />
+                            </div>
+                        </div>
+
+                        <div class="lg:w-1/2 text-white text-center lg:text-left mt-12 lg:mt-0">
+                            <h1 class="text-4xl md:text-5xl font-bold leading-tight">Your Event, Perfectly Planned.</h1>
+                            <p class="py-6 text-lg max-w-xl mx-auto lg:mx-0 bangla">
+                                EventHive-এর মাধ্যমে সহজেই ফটোগ্রাফার, ভিডিওগ্রাফার, হল এবং স্টেজ ডিজাইনার বুক করুন।
+                                আপনার বিশেষ মুহূর্তগুলিকে করে তুলুন আরও উজ্জ্বল।
+                            </p>
+                            <a href="login/login.html"
+                                class="inline-block px-7 py-3 rounded-full text-white font-semibold text-lg bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] shadow-xl 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:brightness-110 focus:outline-none focus:ring-4 focus:ring-white/30">
+                                Let Explore
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- gallery section -->
+
+<section id="gallery" class="py-16 md:py-24 bg-[#112240] text-white relative">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, #0A192F 1px, transparent 1px); background-size: 8px 8px;"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 bangla">আমাদের সেরা কাজ</h2>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto bangla">
+                আমাদের সৃজনশীলতা দেখুন। প্রতিটি ইভেন্ট, একটি মাস্টারপিস।
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            
+            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
+                <img src="images/biye.jpeg" alt="Wedding Event" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-sm font-semibold text-white bangla">বিবাহ অনুষ্ঠান</p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
+                <img src="images/birthday.jpg" alt="Birthday Party" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-sm font-semibold text-white bangla">জন্মদিনের পার্টি</p>
+                </div>
+            </div>
+            
+            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
+                <img src="images/luxa.jpg" alt="Corporate Gala" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-sm font-semibold text-white bangla">কর্পোরেট গালা</p>
+                </div>
+            </div>
+            
+            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
+                <img src="images/stage.jpg" alt="Stage Design" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-sm font-semibold text-white bangla">স্টেজ ডিজাইন</p>
+                </div>
+            </div>
+            
+            </div>
+        
+        <div class="text-center mt-12">
+            <a href="login/login.html" 
+                class="inline-block px-8 py-3 rounded-full text-white font-semibold bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] shadow-md transform transition duration-200 hover:scale-105 hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-white/20 bangla">
+                আরো দেখুন
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- review section -->
+
+<section id="reviews" class="py-16 md:py-24 bg-[#0A192F] text-white relative overflow-hidden">
+    
+    <div class="absolute inset-0 bg-gradient-to-br from-[#0A192F] via-[#112240] to-[#0A192F]"></div>
+    <div class="absolute inset-0 opacity-10" 
+        style="background-image: radial-gradient(circle, #4F46E5 1px, transparent 1px); background-size: 15px 15px;">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 bangla-heading bangla">আমাদের ক্লায়েন্টরা কী বলেন</h2>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto bangla-body bangla">
+                আমাদের সফল ইভেন্টগুলির গল্পগুলি তাদের মুখ থেকে শুনুন।
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transition duration-500 ease-in-out 
+                        border border-transparent hover:border-blue-500 transform hover:scale-[1.02] relative group">
+                
+                <svg class="w-10 h-10 text-blue-500 opacity-20 absolute top-4 right-4 group-hover:opacity-40 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M13 14h-3v-4h3v4zm2 0V9l-5-5-5 5v5h5l-2 5h7l-2-5z"/></svg>
+
+                <div class="flex items-center mb-4">
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                </div>
+                <p class="italic text-gray-300 mb-6 bangla-body">"EventHive আমার বিয়ের অনুষ্ঠানকে সত্যিই অবিস্মরণীয় করে তুলেছে! ফটোগ্রাফি থেকে হল ডেকোরেশন—সবকিছুই ছিল নিখুঁত। ধন্যবাদ!"</p>
+                <div class="flex items-center">
+                    <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-blue-500" src="images/rehena-begom.jpeg" alt="Client 1">
+                    <div>
+                        <p class="font-bold text-white bangla-body">রেহানা বেগম</p>
+                        <p class="text-sm text-blue-300 bangla-body">নববধূ, ঢাকা</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transition duration-500 ease-in-out 
+                        border border-transparent hover:border-blue-500 transform hover:scale-[1.02] relative group">
+                
+                <svg class="w-10 h-10 text-blue-500 opacity-20 absolute top-4 right-4 group-hover:opacity-40 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M13 14h-3v-4h3v4zm2 0V9l-5-5-5 5v5h5l-2 5h7l-2-5z"/></svg>
+
+                <div class="flex items-center mb-4">
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                </div>
+                <p class="italic text-gray-300 mb-6 bangla-body">"কম সময়ে এত ভালো স্টেজ ডিজাইনার পাবো ভাবিনি। ওদের টিম খুবই পেশাদার এবং সময় মেনে কাজ করে। তাদের প্রতি পূর্ণ আস্থা রাখা যায়।"</p>
+                <div class="flex items-center">
+                    <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-blue-500" src="images/corporate.jpg" alt="Client 2">
+                    <div>
+                        <p class="font-bold text-white bangla-body">আহমেদ ফাহিম</p>
+                        <p class="text-sm text-blue-300 bangla-body">কর্পোরেট ইভেন্ট প্ল্যানার</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transition duration-500 ease-in-out 
+                        border border-transparent hover:border-blue-500 transform hover:scale-[1.02] relative group">
+                
+                <svg class="w-10 h-10 text-blue-500 opacity-20 absolute top-4 right-4 group-hover:opacity-40 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M13 14h-3v-4h3v4zm2 0V9l-5-5-5 5v5h5l-2 5h7l-2-5z"/></svg>
+
+                <div class="flex items-center mb-4">
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+                </div>
+                <p class="italic text-gray-300 mb-6 bangla-body">"হল বুকিং-এর প্রক্রিয়াটা এত সহজ ছিল! ফটোগ্রাফার ও ভিডিওগ্রাফাররাও খুবই বন্ধুত্বপূর্ণ এবং সৃজনশীল ছিলেন। EventHive টিমকে ধন্যবাদ!"</p>
+                <div class="flex items-center">
+                    <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-blue-500" src="images/senior.jpg" alt="Client 3">
+                    <div>
+                        <p class="font-bold text-white bangla-body">তাজরিন হক</p>
+                        <p class="text-sm text-blue-300 bangla-body">গ্রাহক</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+            <!-- contact section -->
+
+            <section id="contact" class="py-16 md:py-24 bg-gray-800 text-white relative overflow-hidden">
+
+                <div class="absolute inset-0 bg-gradient-to-br from-[#112240] via-[#0A192F] to-[#112240]"></div>
+
+                <div class="absolute inset-0 opacity-10"
+                    style="background-image: radial-gradient(circle, #60A5FA 1px, transparent 1px); background-size: 10px 10px;">
+                </div>
+
+                <svg class="absolute top-0 left-0 w-full h-[50px] md:h-[80px] text-gray-800/20" viewBox="0 0 1440 320"
+                    preserveAspectRatio="none" fill="currentColor">
+                    <path
+                        d="M0,192L48,192C96,192,192,192,288,181.3C384,171,480,149,576,149.3C672,149,768,171,864,186.7C960,203,1056,213,1152,208C1248,203,1344,181,1392,170.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                    </path>
+                </svg>
+
+                <div class="relative z-10 max-w-6xl mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 bangla">যোগাযোগ করুন</h2>
+                        <p class="text-lg text-gray-300 max-w-2xl mx-auto bangla">
+                            আপনার পরবর্তী ইভেন্টের পরিকল্পনা শুরু করতে চান? আমাদের সাথে কথা বলুন!
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="lg:w-1/3 p-8 bg-gray-900 rounded-lg shadow-xl flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4 text-white bangla">আমাদের সাথে থাকুন</h3>
+                                <p class="text-gray-300 mb-6 bangla">
+                                    আপনার ইভেন্টের স্বপ্ন বাস্তবায়নে আমরা প্রতিশ্রুতিবদ্ধ। যেকোনো প্রশ্ন বা পরামর্শের
+                                    জন্য আমাদের সাথে যোগাযোগ করুন।
+                                </p>
+                                <div class="space-y-4">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400 mr-3"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.657 16.727A8 8 0 0120 18a8 8 0 01-16 0c0-.85.167-1.66.471-2.423L12 10l7.53 4.347zM12 21a2 2 0 100-4 2 2 0 000 4z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
+                                        </svg>
+                                        <span class="text-gray-300">Kulshi, Chattogram, Bangladesh</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400 mr-3"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                        </svg>
+                                        <span class="text-gray-300">01945920705</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400 mr-3"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12z" />
+                                        </svg>
+                                        <span class="text-gray-300">info@eventhive.com</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8">
+                                <h4 class="text-xl font-semibold mb-3 text-white bangla">আমাদের অনুসরণ করুন</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                                        <svg fill="currentColor" class="h-7 w-7" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path
+                                                d="M22.28 0H1.72C.77 0 0 .77 0 1.72v20.56C0 23.23.77 24 1.72 24h20.56c.95 0 1.72-.77 1.72-1.72V1.72C24 .77 23.23 0 22.28 0zM7 20.48H3.34V9.66H7v10.82zM5.17 8.32c-1.22 0-2.02-.82-2.02-1.85 0-1.05.8-1.85 2.07-1.85 1.27 0 2.02.8 2.02 1.85 0 1.03-.75 1.85-2.07 1.85zM20.48 20.48H16.8V14.8c0-1.3-.47-2.18-1.62-2.18-1.2 0-1.92.81-1.92 2.15v5.71H10.82V9.66h3.63v1.57h.05c.5-.8 1.44-1.62 3.32-1.62 3.56 0 4.24 2.34 4.24 7.15v3.72z" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                                        <svg fill="currentColor" class="h-7 w-7" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path
+                                                d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.287 9.497 7.828 11.06.57.104.779-.247.779-.548 0-.269-.009-.982-.014-1.922-3.197.696-3.868-1.536-3.868-1.536-.525-1.334-1.282-1.689-1.282-1.689-1.047-.714.079-.699.079-.699 1.15.081 1.758 1.173 1.758 1.173 1.02 1.753 2.684 1.246 3.33.954.103-.74.4-1.246.726-1.532-2.556-.29-5.232-1.278-5.232-5.681 0-1.254.449-2.282 1.185-3.082-.119-.29-.515-1.458.113-3.04 0 0 .966-.309 3.167 1.176.917-.254 1.889-.381 2.859-.386.97.005 1.842.132 2.76.386 2.2-1.485 3.166-1.176 3.166-1.176.632 1.582.235 2.75.116 3.04.739.799 1.184 1.828 1.184 3.082 0 4.414-2.679 5.385-5.244 5.673.411.355.775 1.05.775 2.118 0 1.532-.014 2.766-.014 3.14 0 .299.208.657.784.546C20.715 21.498 24 17.086 24 12c0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:w-2/3 p-8 bg-gray-900 rounded-lg shadow-xl">
+                            <h3 class="text-2xl font-bold mb-6 text-white text-center bangla">একটি বার্তা পাঠান</h3>
+                            <form action="#" method="POST" class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-300 bangla">নাম</label>
+                                    <input type="text" id="name" name="name"
+                                        class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm text-white focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-300 bangla">ইমেল</label>
+                                    <input type="email" id="email" name="email"
+                                        class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm text-white focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium text-gray-300 bangla">বিষয়</label>
+                                    <input type="text" id="subject" name="subject"
+                                        class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm text-white focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-300 bangla">আপনার বার্তা</label>
+                                    <textarea id="message" name="message" rows="5"
+                                        class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm text-white focus:ring-blue-500 focus:border-blue-500 resize-y transition-colors"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="w-full px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white 
+                                   bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] shadow-md transform transition duration-200 hover:scale-105 hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-white/20 
+                                   transition duration-300 ease-in-out transform hover:scale-105">
+                                        বার্তা পাঠান
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- footer section -->
+        <footer class="footer footer-horizontal footer-center bg-base-100 shadow-sm bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] text-primary-content p-10">
+            <aside>
+                <img src="images/logoname.png" alt="" class="w-80 h-auto mb-4">
+                <p class="font-bold">
+                    ACME Industries Ltd.
+                    <br />
+                    Providing reliable tech since 2002
+                </p>
+                <p>Copyright © joy & hasnat - All right reserved</p>
+            </aside>
+            <nav>
+                <div class="grid grid-flow-col gap-4">
+                    <a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="fill-current">
+                            <path
+                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="fill-current">
+                            <path
+                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="fill-current">
+                            <path
+                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </footer>
+</body>
+
+</html>
