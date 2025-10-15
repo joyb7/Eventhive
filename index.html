@@ -66,6 +66,32 @@
                             class="text-lg font-medium text-gray-800 hover:text-white hover:bg-blue-800 hover:font-semibold transition-all duration-200">
                             Home
                         </a>
+                    <li class="relative px-3 py-2 rounded-md cursor-pointer group">
+                        <details class="group">
+                            <summary
+                                class="text-lg font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 hover:font-semibold transition-all duration-200 rounded-md px-3 py-2 list-none cursor-pointer select-none">
+                                Services
+                            </summary>
+                            <ul
+                                class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-2 hidden group-open:block z-20">
+                                <li>
+                                    <a class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200"
+                                        href="#">Photographer</a>
+                                </li>
+                                <li>
+                                    <a class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200"
+                                        href="#">Videographer</a>
+                                </li>
+                                <li>
+                                    <a class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200"
+                                        href="#">Event Designers</a>
+                                </li>
+                                <li>
+                                    <a class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200"
+                                        href="#">Hall Booking</a>
+                                </li>
+                            </ul>
+                        </details>
                     </li>
 
                     <li class="px-3 py-2 rounded-md cursor-pointer">
@@ -80,31 +106,6 @@
                             class="text-lg font-medium text-gray-800 hover:text-white hover:bg-blue-800 hover:font-semibold transition-all duration-200">
                             Portfolio
                         </a>
-                    </li>
-
-                    <li class="relative px-3 py-2 rounded-md cursor-pointer group">
-                        <details class="group">
-                            <summary
-                                class="text-lg font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 hover:font-semibold transition-all duration-200 rounded-md px-3 py-2 list-none cursor-pointer select-none">
-                                Services
-                            </summary>
-
-                            <ul
-                                class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded-lg p-2 hidden group-open:block z-10">
-                                <li><a
-                                        class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200">Photographer</a>
-                                </li>
-                                <li><a
-                                        class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200">Videographer</a>
-                                </li>
-                                <li><a
-                                        class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200">Event
-                                        Designers</a></li>
-                                <li><a
-                                        class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200">Hall
-                                        Booking</a></li>
-                            </ul>
-                        </details>
                     </li>
 
                     <li class="px-3 py-2 rounded-md cursor-pointer">
@@ -173,146 +174,204 @@
 
             <!-- gallery section -->
 
-<section id="gallery" class="py-16 md:py-24 bg-[#112240] text-white relative">
-    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, #0A192F 1px, transparent 1px); background-size: 8px 8px;"></div>
-    
-    <div class="relative z-10 max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 bangla">আমাদের সেরা কাজ</h2>
-            <p class="text-lg text-gray-400 max-w-3xl mx-auto bangla">
-                আমাদের সৃজনশীলতা দেখুন। প্রতিটি ইভেন্ট, একটি মাস্টারপিস।
-            </p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            
-            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
-                <img src="images/biye.jpeg" alt="Wedding Event" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <p class="text-sm font-semibold text-white bangla">বিবাহ অনুষ্ঠান</p>
+            <section id="gallery" class="py-16 md:py-24 bg-[#112240] text-white relative">
+                <div class="absolute inset-0 opacity-10"
+                    style="background-image: radial-gradient(circle, #0A192F 1px, transparent 1px); background-size: 8px 8px;">
                 </div>
-            </div>
 
-            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
-                <img src="images/birthday.jpg" alt="Birthday Party" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <p class="text-sm font-semibold text-white bangla">জন্মদিনের পার্টি</p>
-                </div>
-            </div>
-            
-            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
-                <img src="images/luxa.jpg" alt="Corporate Gala" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <p class="text-sm font-semibold text-white bangla">কর্পোরেট গালা</p>
-                </div>
-            </div>
-            
-            <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
-                <img src="images/stage.jpg" alt="Stage Design" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <p class="text-sm font-semibold text-white bangla">স্টেজ ডিজাইন</p>
-                </div>
-            </div>
-            
-            </div>
-        
-        <div class="text-center mt-12">
-            <a href="login/login.html" 
-                class="inline-block px-8 py-3 rounded-full text-white font-semibold bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] shadow-md transform transition duration-200 hover:scale-105 hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-white/20 bangla">
-                আরো দেখুন
-            </a>
-        </div>
-    </div>
-</section>
+                <div class="relative z-10 max-w-7xl mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 bangla">আমাদের সেরা কাজ</h2>
+                        <p class="text-lg text-gray-400 max-w-3xl mx-auto bangla">
+                            আমাদের সৃজনশীলতা দেখুন। প্রতিটি ইভেন্ট, একটি মাস্টারপিস।
+                        </p>
+                    </div>
 
-<!-- review section -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
 
-<section id="reviews" class="py-16 md:py-24 bg-[#0A192F] text-white relative overflow-hidden">
-    
-    <div class="absolute inset-0 bg-gradient-to-br from-[#0A192F] via-[#112240] to-[#0A192F]"></div>
-    <div class="absolute inset-0 opacity-10" 
-        style="background-image: radial-gradient(circle, #4F46E5 1px, transparent 1px); background-size: 15px 15px;">
-    </div>
-    
-    <div class="relative z-10 max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 bangla-heading bangla">আমাদের ক্লায়েন্টরা কী বলেন</h2>
-            <p class="text-lg text-gray-400 max-w-3xl mx-auto bangla-body bangla">
-                আমাদের সফল ইভেন্টগুলির গল্পগুলি তাদের মুখ থেকে শুনুন।
-            </p>
-        </div>
+                        <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
+                            <img src="images/biye.jpeg" alt="Wedding Event"
+                                class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <p class="text-sm font-semibold text-white bangla">বিবাহ অনুষ্ঠান</p>
+                            </div>
+                        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transition duration-500 ease-in-out 
-                        border border-transparent hover:border-blue-500 transform hover:scale-[1.02] relative group">
-                
-                <svg class="w-10 h-10 text-blue-500 opacity-20 absolute top-4 right-4 group-hover:opacity-40 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M13 14h-3v-4h3v4zm2 0V9l-5-5-5 5v5h5l-2 5h7l-2-5z"/></svg>
+                        <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
+                            <img src="images/birthday.jpg" alt="Birthday Party"
+                                class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <p class="text-sm font-semibold text-white bangla">জন্মদিনের পার্টি</p>
+                            </div>
+                        </div>
 
-                <div class="flex items-center mb-4">
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                </div>
-                <p class="italic text-gray-300 mb-6 bangla-body">"EventHive আমার বিয়ের অনুষ্ঠানকে সত্যিই অবিস্মরণীয় করে তুলেছে! ফটোগ্রাফি থেকে হল ডেকোরেশন—সবকিছুই ছিল নিখুঁত। ধন্যবাদ!"</p>
-                <div class="flex items-center">
-                    <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-blue-500" src="images/rehena-begom.jpeg" alt="Client 1">
-                    <div>
-                        <p class="font-bold text-white bangla-body">রেহানা বেগম</p>
-                        <p class="text-sm text-blue-300 bangla-body">নববধূ, ঢাকা</p>
+                        <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
+                            <img src="images/luxa.jpg" alt="Corporate Gala"
+                                class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <p class="text-sm font-semibold text-white bangla">কর্পোরেট গালা</p>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden rounded-lg shadow-xl cursor-pointer aspect-square">
+                            <img src="images/stage.jpg" alt="Stage Design"
+                                class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <p class="text-sm font-semibold text-white bangla">স্টেজ ডিজাইন</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="text-center mt-12">
+                        <a href="login/login.html"
+                            class="inline-block px-8 py-3 rounded-full text-white font-semibold bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] shadow-md transform transition duration-200 hover:scale-105 hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-white/20 bangla">
+                            আরো দেখুন
+                        </a>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transition duration-500 ease-in-out 
-                        border border-transparent hover:border-blue-500 transform hover:scale-[1.02] relative group">
-                
-                <svg class="w-10 h-10 text-blue-500 opacity-20 absolute top-4 right-4 group-hover:opacity-40 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M13 14h-3v-4h3v4zm2 0V9l-5-5-5 5v5h5l-2 5h7l-2-5z"/></svg>
+            <!-- review section -->
 
-                <div class="flex items-center mb-4">
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
+            <section id="reviews" class="py-16 md:py-24 bg-[#0A192F] text-white relative overflow-hidden">
+
+                <div class="absolute inset-0 bg-gradient-to-br from-[#0A192F] via-[#112240] to-[#0A192F]"></div>
+                <div class="absolute inset-0 opacity-10"
+                    style="background-image: radial-gradient(circle, #4F46E5 1px, transparent 1px); background-size: 15px 15px;">
                 </div>
-                <p class="italic text-gray-300 mb-6 bangla-body">"কম সময়ে এত ভালো স্টেজ ডিজাইনার পাবো ভাবিনি। ওদের টিম খুবই পেশাদার এবং সময় মেনে কাজ করে। তাদের প্রতি পূর্ণ আস্থা রাখা যায়।"</p>
-                <div class="flex items-center">
-                    <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-blue-500" src="images/corporate.jpg" alt="Client 2">
-                    <div>
-                        <p class="font-bold text-white bangla-body">আহমেদ ফাহিম</p>
-                        <p class="text-sm text-blue-300 bangla-body">কর্পোরেট ইভেন্ট প্ল্যানার</p>
+
+                <div class="relative z-10 max-w-7xl mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 bangla-heading bangla">আমাদের
+                            ক্লায়েন্টরা কী বলেন</h2>
+                        <p class="text-lg text-gray-400 max-w-3xl mx-auto bangla-body bangla">
+                            আমাদের সফল ইভেন্টগুলির গল্পগুলি তাদের মুখ থেকে শুনুন।
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                        <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transition duration-500 ease-in-out 
+                        border border-transparent hover:border-blue-500 transform hover:scale-[1.02] relative group">
+
+                            <svg class="w-10 h-10 text-blue-500 opacity-20 absolute top-4 right-4 group-hover:opacity-40 transition-opacity"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13 14h-3v-4h3v4zm2 0V9l-5-5-5 5v5h5l-2 5h7l-2-5z" />
+                            </svg>
+
+                            <div class="flex items-center mb-4">
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                            </div>
+                            <p class="italic text-gray-300 mb-6 bangla-body">"EventHive আমার বিয়ের অনুষ্ঠানকে সত্যিই
+                                অবিস্মরণীয় করে তুলেছে! ফটোগ্রাফি থেকে হল ডেকোরেশন—সবকিছুই ছিল নিখুঁত। ধন্যবাদ!"</p>
+                            <div class="flex items-center">
+                                <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-blue-500"
+                                    src="images/rehena-begom.jpeg" alt="Client 1">
+                                <div>
+                                    <p class="font-bold text-white bangla-body">রেহানা বেগম</p>
+                                    <p class="text-sm text-blue-300 bangla-body">নববধূ, ঢাকা</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transition duration-500 ease-in-out 
+                        border border-transparent hover:border-blue-500 transform hover:scale-[1.02] relative group">
+
+                            <svg class="w-10 h-10 text-blue-500 opacity-20 absolute top-4 right-4 group-hover:opacity-40 transition-opacity"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13 14h-3v-4h3v4zm2 0V9l-5-5-5 5v5h5l-2 5h7l-2-5z" />
+                            </svg>
+
+                            <div class="flex items-center mb-4">
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                            </div>
+                            <p class="italic text-gray-300 mb-6 bangla-body">"কম সময়ে এত ভালো স্টেজ ডিজাইনার পাবো
+                                ভাবিনি। ওদের টিম খুবই পেশাদার এবং সময় মেনে কাজ করে। তাদের প্রতি পূর্ণ আস্থা রাখা যায়।"
+                            </p>
+                            <div class="flex items-center">
+                                <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-blue-500"
+                                    src="images/corporate.jpg" alt="Client 2">
+                                <div>
+                                    <p class="font-bold text-white bangla-body">আহমেদ ফাহিম</p>
+                                    <p class="text-sm text-blue-300 bangla-body">কর্পোরেট ইভেন্ট প্ল্যানার</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transition duration-500 ease-in-out 
+                        border border-transparent hover:border-blue-500 transform hover:scale-[1.02] relative group">
+
+                            <svg class="w-10 h-10 text-blue-500 opacity-20 absolute top-4 right-4 group-hover:opacity-40 transition-opacity"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13 14h-3v-4h3v4zm2 0V9l-5-5-5 5v5h5l-2 5h7l-2-5z" />
+                            </svg>
+
+                            <div class="flex items-center mb-4">
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z" />
+                                </svg>
+                            </div>
+                            <p class="italic text-gray-300 mb-6 bangla-body">"হল বুকিং-এর প্রক্রিয়াটা এত সহজ ছিল!
+                                ফটোগ্রাফার ও ভিডিওগ্রাফাররাও খুবই বন্ধুত্বপূর্ণ এবং সৃজনশীল ছিলেন। EventHive টিমকে
+                                ধন্যবাদ!"</p>
+                            <div class="flex items-center">
+                                <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-blue-500"
+                                    src="images/senior.jpg" alt="Client 3">
+                                <div>
+                                    <p class="font-bold text-white bangla-body">তাজরিন হক</p>
+                                    <p class="text-sm text-blue-300 bangla-body">গ্রাহক</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-
-            <div class="bg-gray-800 p-8 rounded-xl shadow-2xl transition duration-500 ease-in-out 
-                        border border-transparent hover:border-blue-500 transform hover:scale-[1.02] relative group">
-                
-                <svg class="w-10 h-10 text-blue-500 opacity-20 absolute top-4 right-4 group-hover:opacity-40 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M13 14h-3v-4h3v4zm2 0V9l-5-5-5 5v5h5l-2 5h7l-2-5z"/></svg>
-
-                <div class="flex items-center mb-4">
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.5 3 1.5-6.5-5-4.5 6.8-.5L10 0l2.2 6.5 6.8.5-5 4.5 1.5 6.5z"/></svg>
-                </div>
-                <p class="italic text-gray-300 mb-6 bangla-body">"হল বুকিং-এর প্রক্রিয়াটা এত সহজ ছিল! ফটোগ্রাফার ও ভিডিওগ্রাফাররাও খুবই বন্ধুত্বপূর্ণ এবং সৃজনশীল ছিলেন। EventHive টিমকে ধন্যবাদ!"</p>
-                <div class="flex items-center">
-                    <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-blue-500" src="images/senior.jpg" alt="Client 3">
-                    <div>
-                        <p class="font-bold text-white bangla-body">তাজরিন হক</p>
-                        <p class="text-sm text-blue-300 bangla-body">গ্রাহক</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+            </section>
 
             <!-- contact section -->
 
@@ -386,10 +445,24 @@
                                                 d="M22.28 0H1.72C.77 0 0 .77 0 1.72v20.56C0 23.23.77 24 1.72 24h20.56c.95 0 1.72-.77 1.72-1.72V1.72C24 .77 23.23 0 22.28 0zM7 20.48H3.34V9.66H7v10.82zM5.17 8.32c-1.22 0-2.02-.82-2.02-1.85 0-1.05.8-1.85 2.07-1.85 1.27 0 2.02.8 2.02 1.85 0 1.03-.75 1.85-2.07 1.85zM20.48 20.48H16.8V14.8c0-1.3-.47-2.18-1.62-2.18-1.2 0-1.92.81-1.92 2.15v5.71H10.82V9.66h3.63v1.57h.05c.5-.8 1.44-1.62 3.32-1.62 3.56 0 4.24 2.34 4.24 7.15v3.72z" />
                                         </svg>
                                     </a>
-                                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                                    <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors">
                                         <svg fill="currentColor" class="h-7 w-7" viewBox="0 0 24 24" aria-hidden="true">
                                             <path
-                                                d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.287 9.497 7.828 11.06.57.104.779-.247.779-.548 0-.269-.009-.982-.014-1.922-3.197.696-3.868-1.536-3.868-1.536-.525-1.334-1.282-1.689-1.282-1.689-1.047-.714.079-.699.079-.699 1.15.081 1.758 1.173 1.758 1.173 1.02 1.753 2.684 1.246 3.33.954.103-.74.4-1.246.726-1.532-2.556-.29-5.232-1.278-5.232-5.681 0-1.254.449-2.282 1.185-3.082-.119-.29-.515-1.458.113-3.04 0 0 .966-.309 3.167 1.176.917-.254 1.889-.381 2.859-.386.97.005 1.842.132 2.76.386 2.2-1.485 3.166-1.176 3.166-1.176.632 1.582.235 2.75.116 3.04.739.799 1.184 1.828 1.184 3.082 0 4.414-2.679 5.385-5.244 5.673.411.355.775 1.05.775 2.118 0 1.532-.014 2.766-.014 3.14 0 .299.208.657.784.546C20.715 21.498 24 17.086 24 12c0-6.627-5.373-12-12-12z" />
+                                                d="M22.28 0H1.72C.77 0 0 .77 0 1.72v20.56C0 23.23.77 24 1.72 24h10.55V14.7h-3.1v-3.6h3.1V8.4c0-3.1 1.9-4.8 4.7-4.8 1.3 0 2.5.1 2.8.1v3.3h-1.9c-1.5 0-1.8.7-1.8 1.8v2.4h3.6l-.5 3.6h-3.1V24h6.1c.95 0 1.72-.77 1.72-1.72V1.72C24 .77 23.23 0 22.28 0z" />
+                                        </svg>
+                                    </a>
+
+                                    <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors">
+                                        <svg fill="currentColor" class="h-7 w-7" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path
+                                                d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 3.25A5.25 5.25 0 1 1 6.75 12 5.26 5.26 0 0 1 12 6.75zm0 1.5A3.75 3.75 0 1 0 15.75 12 3.76 3.76 0 0 0 12 8.25zm5.88-2.63a1.13 1.13 0 1 1-1.13 1.13 1.13 1.13 0 0 1 1.13-1.13z" />
+                                        </svg>
+                                    </a>
+
+                                    <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                                        <svg fill="currentColor" class="h-7 w-7" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path
+                                                d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-.8-1.7-.8-2.1-.9C17.3 2.7 12 2.7 12 2.7h-.1s-5.3 0-8.6.3c-.4 0-1.3.1-2.1.9-.6.7-.8 2.3-.8 2.3S0 8.1 0 10v1.9c0 1.9.2 3.8.2 3.8s.2 1.6.8 2.3c.8.8 1.9.8 2.4.9 1.8.2 7.6.3 7.6.3s5.3 0 8.6-.3c.4 0 1.3-.1 2.1-.9.6-.7.8-2.3.8-2.3s.2-1.9.2-3.8V10c0-1.9-.2-3.8-.2-3.8zM9.75 14.57V8.93l5.46 2.82-5.46 2.82z" />
                                         </svg>
                                     </a>
                                 </div>
@@ -405,17 +478,20 @@
                                         class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm text-white focus:ring-blue-500 focus:border-blue-500 transition-colors">
                                 </div>
                                 <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-300 bangla">ইমেল</label>
+                                    <label for="email"
+                                        class="block text-sm font-medium text-gray-300 bangla">ইমেল</label>
                                     <input type="email" id="email" name="email"
                                         class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm text-white focus:ring-blue-500 focus:border-blue-500 transition-colors">
                                 </div>
                                 <div>
-                                    <label for="subject" class="block text-sm font-medium text-gray-300 bangla">বিষয়</label>
+                                    <label for="subject"
+                                        class="block text-sm font-medium text-gray-300 bangla">বিষয়</label>
                                     <input type="text" id="subject" name="subject"
                                         class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm text-white focus:ring-blue-500 focus:border-blue-500 transition-colors">
                                 </div>
                                 <div>
-                                    <label for="message" class="block text-sm font-medium text-gray-300 bangla">আপনার বার্তা</label>
+                                    <label for="message" class="block text-sm font-medium text-gray-300 bangla">আপনার
+                                        বার্তা</label>
                                     <textarea id="message" name="message" rows="5"
                                         class="mt-1 block w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md shadow-sm text-white focus:ring-blue-500 focus:border-blue-500 resize-y transition-colors"></textarea>
                                 </div>
@@ -434,7 +510,8 @@
         </main>
 
         <!-- footer section -->
-        <footer class="footer footer-horizontal footer-center bg-base-100 shadow-sm bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] text-primary-content p-10">
+        <footer
+            class="footer footer-horizontal footer-center bg-base-100 shadow-sm bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] text-primary-content p-10">
             <aside>
                 <img src="images/logoname.png" alt="" class="w-80 h-auto mb-4">
                 <p class="font-bold">
