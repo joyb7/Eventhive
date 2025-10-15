@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Eventhive</title>
+    <!-- tailwind css & daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header">
+        <div class="navbar bg-base-100 shadow-sm bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] px-15">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Portfolio</a></li>
+                        <li>
+                            <a>Services</a>
+                            <ul class="p-2">
+                                <li><a>Photography</a></li>
+                                <li><a>Videography</a></li>
+                                <li><a>Event Designers</a></li>
+                                <li><a>Hall Booking</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost w-33 h-auto"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 gap-20 ">
+                    <li class="px-3 py-2 rounded-md cursor-pointer">
+                        <a href="index.html"
+                            class="text-lg font-medium text-gray-800 hover:text-white hover:bg-blue-800 hover:font-semibold transition-all duration-200">
+                            Home
+                        </a>
+                    <li class="relative px-3 py-2 rounded-md cursor-pointer group">
+                        <details class="group">
+                            <summary
+                                class="text-lg font-medium  text-gray-800 hover:text-white hover:bg-blue-800 hover:font-semibold transition-all duration-200 rounded-md px-3 py-2 list-none cursor-pointer select-none">
+                                Services
+                            </summary>
+                            <ul
+                                class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-2 hidden group-open:block z-20">
+                                <li>
+                                    <a class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200"
+                                        href="#">Photographer</a>
+                                </li>
+                                <li>
+                                    <a class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200"
+                                        href="#">Videographer</a>
+                                </li>
+                                <li>
+                                    <a class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200"
+                                        href="#">Event Designers</a>
+                                </li>
+                                <li>
+                                    <a class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-all duration-200"
+                                        href="#">Hall Booking</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li class="px-3 py-2 rounded-md cursor-pointer">
+                        <a href="about.html"
+                            class="text-lg font-medium  text-gray-800 hover:text-white hover:bg-blue-800 hover:font-semibold transition-all duration-200">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="px-3 py-2 rounded-md cursor-pointer">
+                        <a
+                            class="text-lg font-medium text-gray-800 hover:text-white hover:bg-blue-800 hover:font-semibold transition-all duration-200">
+                            Portfolio
+                        </a>
+                    </li>
+
+                    <li class="px-3 py-2 rounded-md cursor-pointer">
+                        <a href="contact.html"
+                            class="text-lg font-medium text-gray-800 hover:text-white hover:bg-blue-800 hover:font-semibold transition-all duration-200">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a href="login/login.html"
+                    class="inline-block px-5 py-2 rounded-md text-white font-semibold bg-gradient-to-r from-[#63291D] via-[#A53E25] to-[#C14A26] shadow-md transform transition duration-200 hover:scale-105 hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-white/20">Login</a>
+            </div>
+        </div>
+        </header>
+
+        <main>
+            <section class="relative min-h-screen overflow-hidden py-16 md:py-24">
+
+                <div class="absolute inset-0 bg-gradient-to-br from-[#0A192F] via-[#112240] to-[#0A192F]"></div>
+                <div class="absolute inset-0 opacity-15"
+                    style="background-image: radial-gradient(circle, #4F46E5 1px, transparent 1px); background-size: 12px 12px;">
+                </div>
+
+                <div
+                    class="absolute top-1/4 left-1/4 w-80 h-80 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob">
+                </div>
+                <div
+                    class="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-2000">
+                </div>
+                <div
+                    class="absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-4000">
+                </div>
+
+                <div class="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8">
+
+                    <div class="text-center mb-16">
+                        <p class="text-xl text-blue-400 font-semibold mb-2">Our Story</p>
+                        <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight">
+                            <span class="border-b-4 border-blue-500 pb-1">About EventHive</span>
+                        </h1>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12 text-white">
+
+                        <div
+                            class="bg-white/5 backdrop-blur-sm p-8 rounded-xl shadow-2xl border border-blue-500/30 hover:bg-white/10 transition duration-300">
+                            <h2 class="text-3xl font-bold mb-4 text-blue-400">Mission</h2>
+                            <p class="text-gray-300 text-lg bangla">
+                                আমাদের লক্ষ্য হলো ইভেন্ট বুকিং প্রক্রিয়াকে সহজ, দ্রুত এবং বিশ্বাসযোগ্য করা। প্রতিটি
+                                ক্লায়েন্টের জন্য নিখুঁত পরিষেবা প্রদান করা এবং তাদের বিশেষ দিনটিকে আরও স্মরণীয় করে
+                                তোলাই EventHive-এর মূল উদ্দেশ্য।
+                            </p>
+                            <p class="mt-4 text-sm text-gray-500">
+                                *Our mission is to make event booking simple, fast, and reliable, providing perfect
+                                service for every client to make their special day memorable.
+                            </p>
+                        </div>
+
+                        <div
+                            class="bg-white/5 backdrop-blur-sm p-8 rounded-xl shadow-2xl border border-pink-500/30 hover:bg-white/10 transition duration-300">
+                            <h2 class="text-3xl font-bold mb-4 text-pink-400">Vision</h2>
+                            <p class="text-gray-300 text-lg bangla">
+                                ইভেন্ট ম্যানেজমেন্ট এবং সার্ভিস বুকিং-এর ক্ষেত্রে আমরা দক্ষিণ এশিয়ার অন্যতম সেরা
+                                প্ল্যাটফর্ম হতে চাই, যেখানে প্রযুক্তির মাধ্যমে সেরা ভেন্ডরদের সাথে ক্লায়েন্টদের যুক্ত
+                                করা হবে।
+                            </p>
+                            <p class="mt-4 text-sm text-gray-500">
+                                *We aim to be one of South Asia's top event management and service booking platforms,
+                                connecting clients with the best vendors through technology.
+                            </p>
+                        </div>
+
+                        <div
+                            class="md:col-span-2 bg-white/5 backdrop-blur-sm p-8 rounded-xl shadow-2xl border border-purple-500/30 mt-8">
+                            <h2 class="text-3xl font-bold mb-4 text-purple-400 text-center">Meet the Team</h2>
+                            <p class="text-center text-gray-300 max-w-3xl mx-auto bangla">
+                                আমাদের এই দলে আছেন অভিজ্ঞ ইভেন্ট প্ল্যানার, দক্ষ টেকনিশিয়ান এবং সৃজনশীল ডিজাইনাররা।
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-6 mt-6">
+                                <!--team members -->
+                                <div class="text-center p-4">
+                                    <img src="images/abul.jpg" alt="Team Member - Abul"
+                                        class="w-24 h-24 object-cover rounded-full mx-auto mb-2 border-2 border-purple-400" />
+                                    <p class="font-semibold text-white">Abul Hasnat</p>
+                                    <p class="text-sm text-gray-400">Lead Planner</p>
+                                </div>
+                                <div class="text-center p-4">
+                                    <img src="images/joy.jpg" alt="Team Member - Joy"
+                                        class="w-24 h-24 object-cover rounded-full mx-auto mb-2 border-2 border-purple-400" />
+                                    <p class="font-semibold text-white">Joy Barua</p>
+                                    <p class="text-sm text-gray-400">Tech Lead</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+</body>
+
+</html>
