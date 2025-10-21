@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVNETHIVE FORM</title>
+
+    <!-- tailwind css & daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="from.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 min-h-screen flex items-center justify-center p-6">
+
+  <div class="w-full max-w-2xl bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl p-8 animate-fadeIn">
+    <!-- Logo -->
+    <img class="w-32 mx-auto mb-4" src="../images/onlylogo.png" alt="Eventhive Logo">
+    <h1 class="text-3xl font-extrabold text-center mb-6 text-indigo-600 tracking-wide animate-slideDown">
+       Eventhive Register
+    </h1>
+
+    <!-- Role selection -->
+    <div class="mb-8 text-center">
+      <label class="block text-sm font-medium mb-3 text-gray-700">I am a</label>
+      <div class="btn-group">
+        <input type="radio" name="role" id="role-user" class="hidden" checked>
+        <label for="role-user" id="roleUserLabel" 
+               class="btn btn-outline transition-all duration-300">User</label>
+
+        <input type="radio" name="role" id="role-vendor" class="hidden">
+        <label for="role-vendor" id="roleVendorLabel" 
+               class="btn btn-outline transition-all duration-300">Vendor</label>
+      </div>
+    </div>
+
+    <!-- USER FORM -->
+    <form id="userForm" class="space-y-4 transition-all duration-500 ease-in-out">
+      <h2 class="text-lg font-semibold text-indigo-500">✨ User Request</h2>
+
+      <div>
+        <label class="label"><span class="label-text">What kind of hire do you want?</span></label>
+        <select id="hireType" class="select select-bordered w-full focus:ring focus:ring-indigo-300" required>
+          <option value="" selected disabled>Choose one</option>
+          <option value="photographer">Photographer</option>
+          <option value="videographer">Videographer</option>
+          <option value="hall">Hall booking</option>
+          <option value="decorator">Stage decorator</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label"><span class="label-text">Upload an image (optional)</span></label>
+        <input id="userImage" type="file" accept="image/*" class="file-input file-input-bordered w-full" />
+        <img id="userPreview" class="mt-2 max-h-40 rounded-lg shadow-md hidden transition-all duration-500" alt="preview"/>
+      </div>
+
+      <div>
+        <label class="label"><span class="label-text">Phone number</span></label>
+        <input id="userPhone" type="tel" class="input input-bordered w-full focus:ring focus:ring-indigo-300" placeholder="+880 1XXXXXXXXX" required />
+      </div>
+
+      <div>
+        <label class="label"><span class="label-text">Address</span></label>
+        <textarea id="userAddress" class="textarea textarea-bordered w-full focus:ring focus:ring-indigo-300" rows="3" required></textarea>
+      </div>
+
+      <div class="flex justify-end">
+        <button type="submit" class="btn btn-primary hover:scale-105 transition-transform duration-300">Submit Request</button>
+      </div>
+    </form>
+
+    <!-- VENDOR FORM -->
+    <form id="vendorForm" class="space-y-4 hidden transition-all duration-500 ease-in-out">
+      <h2 class="text-lg font-semibold text-purple-500">💼 Vendor Registration</h2>
+
+      <div>
+        <label class="label"><span class="label-text">What type of work do you do?</span></label>
+        <select id="vendorType" class="select select-bordered w-full focus:ring focus:ring-purple-300" required>
+          <option value="" selected disabled>Choose one</option>
+          <option value="photographer">Photographer</option>
+          <option value="videographer">Videographer</option>
+          <option value="hall">Hall rental</option>
+          <option value="decorator">Stage decorator</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label"><span class="label-text">Office name</span></label>
+        <input id="vendorOffice" type="text" class="input input-bordered w-full focus:ring focus:ring-purple-300" required />
+      </div>
+
+      <div>
+        <label class="label"><span class="label-text">Upload an image (optional)</span></label>
+        <input id="vendorImage" type="file" accept="image/*" class="file-input file-input-bordered w-full" />
+        <img id="vendorPreview" class="mt-2 max-h-40 rounded-lg shadow-md hidden transition-all duration-500" alt="preview"/>
+      </div>
+
+      <div>
+        <label class="label"><span class="label-text">Mobile number</span></label>
+        <input id="vendorMobile" type="tel" class="input input-bordered w-full focus:ring focus:ring-purple-300" required />
+      </div>
+
+      <div>
+        <label class="label"><span class="label-text">Location</span></label>
+        <input id="vendorLocation" type="text" class="input input-bordered w-full focus:ring focus:ring-purple-300" required />
+      </div>
+
+      <div>
+        <label class="label"><span class="label-text">Admin name</span></label>
+        <input id="vendorAdmin" type="text" class="input input-bordered w-full focus:ring focus:ring-purple-300" required />
+      </div>
+
+      <div class="flex justify-end">
+        <button type="submit" class="btn btn-primary hover:scale-105 transition-transform duration-300">Register as Vendor</button>
+      </div>
+    </form>
+  </div>
+    <script src="form.js"></script>
+</body>
+</html>
