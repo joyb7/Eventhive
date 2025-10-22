@@ -1,134 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVNETHIVE FORM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVNETHIVE FORM</title>
 
-    <!-- tailwind css & daisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- css -->
-    <link rel="stylesheet" href="from.css">
+  <link rel="stylesheet" href="from.css">
 
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Outfit:wght@100..900&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
 </head>
-<body class="bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 min-h-screen flex items-center justify-center p-6">
 
-  <div class="w-full max-w-2xl bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl p-8 animate-fadeIn">
-    <!-- Logo -->
-    <img class="w-32 mx-auto mb-4" src="../images/onlylogo.png" alt="Eventhive Logo">
-    <h1 class="text-3xl font-extrabold text-center mb-6 text-indigo-600 tracking-wide animate-slideDown">
-       Eventhive Register
+<body
+  class="bg-gradient-to-r from-blue-100 via-pink-100 to-purple-100 min-h-screen flex items-center justify-center p-6">
+
+  <div id="formContainer"
+    class="w-full max-w-2xl bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl shadow-gray-400 p-10 transition-all duration-700 ease-out animate-slideIn">
+    <img class="w-24 mx-auto mb-4 animate-bounceOnce" src="../images/onlylogo.png" alt="Eventhive Logo">
+    <h1 class="text-4xl font-extrabold text-center mb-2 text-primary tracking-wide animate-slideDown">
+      Eventhive Registration
     </h1>
 
-    <!-- Role selection -->
-    <div class="mb-8 text-center">
-      <label class="block text-sm font-medium mb-3 text-gray-700">I am a</label>
-      <div class="btn-group">
+    <h3 class="text-lg font-medium text-center text-gray-600 bangla mb-8">ইভেন্ট আয়োজনকারী (User) অথবা সেবা প্রদানকারী
+      (Vendor), আপনার ভূমিকা নির্বাচন করে ইভেন্টহাইভের সাথে যুক্ত হন।
+    </h3>
+
+    <div class="mb-10 text-center">
+      <label class="block text-sm font-medium mb-3 text-gray-700">Select your role</label>
+      <div class="inline-flex rounded-full shadow-lg bg-base-200 p-1 space-x-5">
         <input type="radio" name="role" id="role-user" class="hidden" checked>
-        <label for="role-user" id="roleUserLabel" 
-               class="btn btn-outline transition-all duration-300">User</label>
+        <label for="role-user" id="roleUserLabel"
+          class="btn btn-sm sm:btn-md min-w-[120px] rounded-full transition-all duration-500 ease-in-out">
+          <i class="fa-solid fa-user"></i> User</label>
 
         <input type="radio" name="role" id="role-vendor" class="hidden">
-        <label for="role-vendor" id="roleVendorLabel" 
-               class="btn btn-outline transition-all duration-300">Vendor</label>
+        <label for="role-vendor" id="roleVendorLabel"
+          class="btn btn-sm sm:btn-md min-w-[120px] rounded-full transition-all duration-500 ease-in-out">
+          <i class="fa-solid fa-briefcase"></i> Vendor</label>
       </div>
     </div>
 
-    <!-- USER FORM -->
-    <form id="userForm" class="space-y-4 transition-all duration-500 ease-in-out">
-      <h2 class="text-lg font-semibold text-indigo-500">✨ User Request</h2>
+    <!-- user form -->
 
-      <div>
-        <label class="label"><span class="label-text">What kind of hire do you want?</span></label>
-        <select id="hireType" class="select select-bordered w-full focus:ring focus:ring-indigo-300" required>
+    <form id="userForm" class="space-y-6 transition-all duration-500 ease-in-out">
+      <h2 class="text-xl font-bold text-primary flex items-center gap-2 border-b pb-2 mb-4">
+        <i class="fa-solid fa-user"></i> User Service Request
+      </h2>
+
+      <div class="form-control">
+        <label class="label"><span class="label-text font-semibold">What kind of hire do you want?</span></label>
+        <select id="hireType"
+          class="select select-bordered select-primary w-full shadow-md focus:shadow-lg transition-all duration-300"
+          required>
           <option value="" selected disabled>Choose one</option>
-          <option value="photographer">Photographer</option>
-          <option value="videographer">Videographer</option>
-          <option value="hall">Hall booking</option>
-          <option value="decorator">Stage decorator</option>
+          <option value="photographer">📸 Photographer</option>
+          <option value="videographer">🎥 Videographer</option>
+          <option value="hall">🏢 Hall booking</option>
+          <option value="decorator">🌸 Stage decorator</option>
         </select>
       </div>
 
-      <div>
-        <label class="label"><span class="label-text">Upload an image (optional)</span></label>
-        <input id="userImage" type="file" accept="image/*" class="file-input file-input-bordered w-full" />
-        <img id="userPreview" class="mt-2 max-h-40 rounded-lg shadow-md hidden transition-all duration-500" alt="preview"/>
+      <div class="form-control">
+        <label class="label"><span class="label-text font-semibold">Upload an image (optional)</span></label>
+        <input id="userImage" type="file" accept="image/*"
+          class="file-input file-input-bordered file-input-primary w-full shadow-md" />
+        <img id="userPreview"
+          class="mt-4 max-h-48 rounded-xl shadow-xl border-4 border-dashed border-gray-200 p-1 hidden transition-all duration-500 object-cover"
+          alt="preview" />
       </div>
 
-      <div>
-        <label class="label"><span class="label-text">Phone number</span></label>
-        <input id="userPhone" type="tel" class="input input-bordered w-full focus:ring focus:ring-indigo-300" placeholder="+880 1XXXXXXXXX" required />
+      <div class="form-control">
+        <label class="label"><span class="label-text font-semibold">Phone number</span></label>
+        <input id="userPhone" type="tel" class="input input-bordered input-primary w-full shadow-md focus:shadow-lg"
+          placeholder="+880 1XXXXXXXXX" required />
       </div>
 
-      <div>
-        <label class="label"><span class="label-text">Address</span></label>
-        <textarea id="userAddress" class="textarea textarea-bordered w-full focus:ring focus:ring-indigo-300" rows="3" required></textarea>
+      <div class="form-control">
+        <label class="label"><span class="label-text font-semibold">Address</span></label>
+        <textarea id="userAddress" class="textarea textarea-bordered textarea-primary w-full shadow-md focus:shadow-lg"
+          rows="3" required placeholder="Full event address"></textarea>
       </div>
 
-      <div class="flex justify-end">
-        <button type="submit" class="btn btn-primary hover:scale-105 transition-transform duration-300">Submit Request</button>
+      <div class="flex justify-end pt-4">
+        <button type="submit"
+          class="btn btn-lg btn-primary text-white font-bold tracking-wider w-full sm:w-auto hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+          <i class="fa-solid fa-paper-plane"></i> Submit Request
+        </button>
       </div>
     </form>
 
-    <!-- VENDOR FORM -->
-    <form id="vendorForm" class="space-y-4 hidden transition-all duration-500 ease-in-out">
-      <h2 class="text-lg font-semibold text-purple-500">💼 Vendor Registration</h2>
+    <!-- Vendor Form -->
 
-      <div>
-        <label class="label"><span class="label-text">What type of work do you do?</span></label>
-        <select id="vendorType" class="select select-bordered w-full focus:ring focus:ring-purple-300" required>
+    <form id="vendorForm" class="space-y-6 hidden transition-all duration-500 ease-in-out">
+      <h2 class="text-xl font-bold text-secondary flex items-center gap-2 border-b pb-2 mb-4">
+        <i class="fa-solid fa-shop"></i> Vendor Registration
+      </h2>
+
+      <div class="form-control">
+        <label class="label"><span class="label-text font-semibold">What type of work do you do?</span></label>
+        <select id="vendorType"
+          class="select select-bordered select-secondary w-full shadow-md focus:shadow-lg transition-all duration-300"
+          required>
           <option value="" selected disabled>Choose one</option>
-          <option value="photographer">Photographer</option>
-          <option value="videographer">Videographer</option>
-          <option value="hall">Hall rental</option>
-          <option value="decorator">Stage decorator</option>
+          <option value="photographer">📸 Photographer</option>
+          <option value="videographer">🎥 Videographer</option>
+          <option value="hall">🏢 Hall rental</option>
+          <option value="decorator">🌸 Stage decorator</option>
         </select>
       </div>
 
-      <div>
-        <label class="label"><span class="label-text">Office name</span></label>
-        <input id="vendorOffice" type="text" class="input input-bordered w-full focus:ring focus:ring-purple-300" required />
+      <div class="form-control">
+        <label class="label"><span class="label-text font-semibold">Admin name</span></label>
+        <input id="vendorAdmin" type="text"
+          class="input input-bordered input-secondary w-full shadow-md focus:shadow-lg" required
+          placeholder="Your name" />
       </div>
 
-      <div>
-        <label class="label"><span class="label-text">Upload an image (optional)</span></label>
-        <input id="vendorImage" type="file" accept="image/*" class="file-input file-input-bordered w-full" />
-        <img id="vendorPreview" class="mt-2 max-h-40 rounded-lg shadow-md hidden transition-all duration-500" alt="preview"/>
+      <div class="form-control">
+        <label class="label"><span class="label-text font-semibold">Office name</span></label>
+        <input id="vendorOffice" type="text"
+          class="input input-bordered input-secondary w-full shadow-md focus:shadow-lg" required
+          placeholder="e.g., Creative Events Co." />
       </div>
 
-      <div>
-        <label class="label"><span class="label-text">Mobile number</span></label>
-        <input id="vendorMobile" type="tel" class="input input-bordered w-full focus:ring focus:ring-purple-300" required />
+      <div class="form-control">
+        <label class="label"><span class="label-text font-semibold">Upload an image (optional)</span></label>
+        <input id="vendorImage" type="file" accept="image/*"
+          class="file-input file-input-bordered file-input-secondary w-full shadow-md" />
+        <img id="vendorPreview"
+          class="mt-4 max-h-48 rounded-xl shadow-xl border-4 border-dashed border-gray-200 p-1 hidden transition-all duration-500 object-cover"
+          alt="preview" />
       </div>
 
-      <div>
-        <label class="label"><span class="label-text">Location</span></label>
-        <input id="vendorLocation" type="text" class="input input-bordered w-full focus:ring focus:ring-purple-300" required />
+      <div class="form-control">
+        <label class="label"><span class="label-text font-semibold">Mobile number</span></label>
+        <input id="vendorMobile" type="tel"
+          class="input input-bordered input-secondary w-full shadow-md focus:shadow-lg" required
+          placeholder="+880 1XXXXXXXXX" />
       </div>
 
-      <div>
-        <label class="label"><span class="label-text">Admin name</span></label>
-        <input id="vendorAdmin" type="text" class="input input-bordered w-full focus:ring focus:ring-purple-300" required />
+      <div class="form-control">
+        <label class="label"><span class="label-text font-semibold">Location</span></label>
+        <input id="vendorLocation" type="text"
+          class="input input-bordered input-secondary w-full shadow-md focus:shadow-lg" required
+          placeholder="City or area of operation" />
       </div>
 
-      <div class="flex justify-end">
-        <button type="submit" class="btn btn-primary hover:scale-105 transition-transform duration-300">Register as Vendor</button>
+
+      <div class="flex justify-end pt-4">
+        <button type="submit"
+          class="btn btn-lg btn-secondary text-white font-bold tracking-wider w-full sm:w-auto hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+          <i class="fa-solid fa-user-plus"></i> Register as Vendor
+        </button>
       </div>
     </form>
   </div>
-    <script src="form.js"></script>
+  <script src="form.js"></script>
 </body>
+
 </html>
