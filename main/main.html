@@ -5,32 +5,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- tailwind css & daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- css -->
     <link rel="stylesheet" href="main.css">
 
-    <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
+
+    <style>
+        /* Style for collapsible comments */
+        .comments-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        .comments-list.expanded {
+            max-height: 1000px;
+            /* A large enough value to show all comments */
+            transition: max-height 0.6s ease-in;
+        }
+
+        /* Animation for new posts fading in */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-gradient-to-br from-pink-50 to-gray-100">
     <header>
-        <div class="navbar bg-base-100 shadow-sm bg-pink-400">
+        <div class="navbar bg-base-100 shadow-sm bg-gradient-to-r from-pink-500 to-fuchsia-600 sticky top-0 z-40">
             <div class="flex-1">
                 <a class="btn btn-ghost text-xl"><img class="w-30" src="../images/logoname.png" alt=""></a>
             </div>
+            <div class="flex items-center gap-7 mr-9 relative">
+                <div class="relative">
+                    <button id="messagesBtn" aria-label="Messages"
+                        class="relative flex items-center justify-center w-12 h-12 rounded-full bg-white/5 text-white text-lg transition transform hover:scale-110 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-pink-400 shadow-md">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span
+                            class="absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 text-[11px] font-bold bg-pink-600 text-white rounded-full shadow">
+                            5
+                        </span>
+                    </button>
+
+                    <div id="messagesDropdown"
+                        class="hidden absolute top-14 left-0 w-72 bg-white text-gray-800 rounded-lg shadow-lg z-50">
+                        <ul class="divide-y divide-gray-200 text-sm">
+                            <li class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                                <img src="https://i.pravatar.cc/40?img=1" alt="Rahim"
+                                    class="w-10 h-10 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <span class="font-semibold text-gray-900">Rahim</span>
+                                    <span class="text-gray-600 text-xs truncate">Hey, did you confirm the booking?</span>
+                                </div>
+                            </li>
+                            <li class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                                <img src="https://i.pravatar.cc/40?img=2" alt="Karim"
+                                    class="w-10 h-10 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <span class="font-semibold text-gray-900">Karim</span>
+                                    <span class="text-gray-600 text-xs truncate">Event confirmed ✅</span>
+                                </div>
+                            </li>
+                            <li class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                                <img src="https://i.pravatar.cc/40?img=3" alt="Salma"
+                                    class="w-10 h-10 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <span class="font-semibold text-gray-900">Salma</span>
+                                    <span class="text-gray-600 text-xs truncate">Need more details about
+                                        decoration</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <button id="notificationsBtn" aria-label="Notifications"
+                        class="relative flex items-center justify-center w-12 h-12 rounded-full bg-white/5 text-white text-lg transition transform hover:scale-110 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-pink-400 shadow-md">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="absolute -top-1 -right-1 flex">
+                            <span class="block w-3 h-3 rounded-full bg-red-500 animate-ping opacity-70"></span>
+                            <span class="block w-3 h-3 rounded-full bg-red-600 absolute"></span>
+                        </span>
+                    </button>
+
+                    <div id="notificationsDropdown"
+                        class="hidden absolute top-14 left-0 w-72 bg-white text-gray-800 rounded-lg shadow-lg z-50">
+                        <ul class="divide-y divide-gray-200 text-sm">
+                            <li class="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                                🔔 New booking request received
+                            </li>
+                            <li class="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                                🔔 Payment successfully processed
+                            </li>
+                            <li class="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                                🔔 Stage decorator confirmed for event
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <button aria-label="Popular"
+                        class="flex items-center justify-center w-12 h-12 rounded-full bg-white/5 text-white text-lg transition transform hover:scale-110 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-pink-400 shadow-md">
+                        <i class="fa-solid fa-fire text-blue-400"></i>
+                    </button>
+                </div>
+            </div>
+
             <div class="flex gap-2">
                 <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
                 <div class="dropdown dropdown-end">
@@ -50,12 +151,495 @@
                             </a>
                         </li>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li><a href="../index.html">Logout</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
+
+    <main>
+        <section class="max-w-4xl mx-auto py-8 space-y-6">
+            <div
+                class="bg-white rounded-lg shadow p-4 transition-all duration-300 transform hover:scale-[1.01] hover:shadow-lg">
+                <h2 class="text-lg font-semibold mb-2">Create Post</h2>
+                <form id="createPostForm" class="space-y-3">
+                    <textarea id="caption" rows="2" maxlength="300" class="w-full textarea textarea-bordered"
+                        placeholder="What's happening? (caption)"></textarea>
+
+                    <div class="flex items-center gap-3">
+                        <input id="mediaInput" type="file" accept="image/*,video/*" multiple
+                            class="file-input file-input-bordered" />
+                        <button id="clearAllMedia" type="button" class="btn btn-ghost btn-sm hidden">Clear</button>
+                        <div class="ml-auto text-sm text-gray-500">Max 10 images &amp; 1 video</div>
+                    </div>
+
+                    <div id="preview" class="mt-3 grid grid-cols-1 gap-3"></div>
+
+                    <div class="flex justify-end">
+                        <button type="submit" class="btn btn-primary">Post</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="feed" class="space-y-4"></div>
+        </section>
+
+        <script>
+            (function () {
+                // helpers & state
+                const STORAGE_KEY = 'ev_posts_v1';
+                const SESSION_USER_KEY = 'ev_user_v1';
+                const MAX_FILE_MB = 50; // per file
+                const MAX_IMAGES = 10;
+                const MAX_VIDEOS = 1;
+
+                const feedEl = document.getElementById('feed');
+                const form = document.getElementById('createPostForm');
+                const captionEl = document.getElementById('caption');
+                const fileInput = document.getElementById('mediaInput');
+                const previewEl = document.getElementById('preview');
+                const clearAllBtn = document.getElementById('clearAllMedia');
+
+                // in-memory selected files for preview (File objects)
+                let selectedFiles = [];
+
+                // posts load (with legacy compatibility)
+                let posts = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]') || [];
+                posts = posts.map(p => {
+                    // legacy single file -> new media array
+                    if (p.mediaData && !p.media) {
+                        p.media = [{ type: p.mediaType || 'image/*', data: p.mediaData }];
+                        delete p.mediaType; delete p.mediaData;
+                    }
+                    p.ratings = p.ratings || [];
+                    p.comments = p.comments || [];
+                    p.media = p.media || [];
+                    return p;
+                });
+
+                let userId = sessionStorage.getItem(SESSION_USER_KEY);
+                if (!userId) {
+                    userId = 'u_' + Math.random().toString(36).slice(2, 9);
+                    sessionStorage.setItem(SESSION_USER_KEY, userId);
+                }
+
+                // utilities
+                function savePosts() { localStorage.setItem(STORAGE_KEY, JSON.stringify(posts)); }
+                function uid() { return 'p_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6); }
+                function timeAgo(ts) {
+                    const s = Math.floor((Date.now() - ts) / 1000);
+                    if (s < 60) return s + 's';
+                    const m = Math.floor(s / 60);
+                    if (m < 60) return m + 'm';
+                    const h = Math.floor(m / 60);
+                    if (h < 24) return h + 'h';
+                    const d = Math.floor(h / 24);
+                    return d + 'd';
+                }
+
+                // render feed
+                function render() {
+                    feedEl.innerHTML = '';
+                    // newest first
+                    posts.slice().reverse().forEach((post, index) => { // MODIFIED: Added index
+                        const card = document.createElement('article');
+                        // MODIFIED: Added hover:shadow-xl and transition
+                        card.className = 'bg-white rounded-lg shadow p-4 transition-all duration-300 transform hover:scale-[1.01] hover:shadow-xl';
+                        card.dataset.id = post.id;
+
+                        // NEW: Animate the newest post
+                        if (index === 0 && posts.length > 0) {
+                            card.style.animation = 'fadeInUp 0.5s ease-out';
+                        }
+
+                        // header
+                        const header = document.createElement('div');
+                        header.className = 'flex items-center justify-between mb-3';
+                        header.innerHTML = `
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-pink-200 flex items-center justify-center font-semibold text-pink-700">${(post.authorName || 'U').slice(0, 1)}</div>
+                    <div>
+                        <div class="font-semibold">${post.authorName || 'Anonymous'}</div>
+                        <div class="text-xs text-gray-500">${timeAgo(post.ts)} ago</div>
+                    </div>
+                </div>
+            `;
+                        card.appendChild(header);
+
+                        // caption
+                        const cap = document.createElement('p');
+                        cap.className = 'mb-3 text-gray-800';
+                        cap.innerHTML = escapeHtml(post.caption || '');
+                        card.appendChild(cap);
+
+                        // media (video prioritized then images grid)
+                        if (post.media && post.media.length) {
+                            const vids = post.media.filter(m => m.type && m.type.startsWith('video/'));
+                            const imgs = post.media.filter(m => m.type && m.type.startsWith('image/'));
+                            if (vids.length) {
+                                // show first video large
+                                const vWrap = document.createElement('div');
+                                vWrap.className = 'mb-3';
+                                const vid = document.createElement('video');
+                                vid.src = vids[0].data;
+                                vid.controls = true;
+                                vid.className = 'w-full rounded shadow-md max-h-[480px]';
+                                vWrap.appendChild(vid);
+                                card.appendChild(vWrap);
+                            }
+                            if (imgs.length) {
+                                const grid = document.createElement('div');
+                                // responsive grid: 1-3 columns
+                                grid.className = 'grid gap-2 mb-3';
+                                const cols = Math.min(3, imgs.length);
+                                grid.style.gridTemplateColumns = `repeat(${cols}, minmax(0,1fr))`;
+                                imgs.forEach(im => {
+                                    const img = document.createElement('img');
+                                    img.src = im.data;
+                                    img.alt = 'post image';
+                                    img.className = 'w-full h-40 object-cover rounded transition-transform transform hover:scale-105';
+                                    grid.appendChild(img);
+                                });
+                                card.appendChild(grid);
+                            }
+                        }
+
+                        // rating and comment summary
+                        const avg = computeAverage(post.ratings);
+                        const actions = document.createElement('div');
+                        actions.className = 'flex items-center justify-between';
+                        // MODIFIED: Made comment count clickable and added data-action
+                        actions.innerHTML = `
+                <div class="flex items-center gap-3">
+                    <div class="rating rating-sm" data-action="rating">
+                        ${[1, 2, 3, 4, 5].map(i => `<input type="radio" name="star_${post.id}" class="mask mask-star-2 bg-orange-400 star" data-value="${i}" ${userRated(post, userId) >= i ? 'checked' : ''}>`).join('')}
+                    </div>
+                    <div class="text-sm text-gray-600">${avg.toFixed(1)} · ${post.ratings.length} rating(s)</div>
+                </div>
+                <div class="text-sm text-gray-600 ${post.comments.length > 0 ? 'cursor-pointer hover:underline' : 'opacity-50'}" data-action="toggle-comments">
+                    ${post.comments.length} comment(s)
+                </div>
+            `;
+                        card.appendChild(actions);
+
+                        // comments list
+                        const commentsWrap = document.createElement('div');
+                        // MODIFIED: Added 'comments-list' class (initially hidden by CSS max-height: 0)
+                        commentsWrap.className = 'mt-3 space-y-2 comments-list';
+                        post.comments.slice().reverse().forEach(c => {
+                            const cEl = document.createElement('div');
+                            cEl.className = 'text-sm p-2 bg-gray-50 rounded'; // Added light bg to comments
+                            cEl.innerHTML = `<span class="font-semibold">${escapeHtml(c.name || 'User')}</span> <span class="text-gray-700">${escapeHtml(c.text)}</span>
+                        <div class="text-xs text-gray-500">${timeAgo(c.ts)} ago</div>`;
+                            commentsWrap.appendChild(cEl);
+                        });
+                        card.appendChild(commentsWrap);
+
+                        // add comment
+                        const commentForm = document.createElement('form');
+                        commentForm.className = 'mt-3 flex gap-2';
+                        commentForm.innerHTML = `
+                <input class="input input-sm flex-1" name="comment" placeholder="Write a comment..." maxlength="200" required />
+                <button class="btn btn-sm" type="submit">Send</button>
+            `;
+                        card.appendChild(commentForm);
+
+                        // event handlers
+                        // MODIFIED: Added click handler for comment toggle
+                        card.addEventListener('click', function (e) {
+                            const star = e.target.closest('.star');
+                            const toggleBtn = e.target.closest('[data-action="toggle-comments"]');
+
+                            if (star) {
+                                const value = Number(star.dataset.value);
+                                toggleRating(post.id, userId, value);
+                                render();
+                            } else if (toggleBtn && post.comments.length > 0) {
+                                // Find the comments list within this card and toggle it
+                                const commentsList = card.querySelector('.comments-list');
+                                if (commentsList) {
+                                    commentsList.classList.toggle('expanded');
+                                }
+                            }
+                        });
+
+                        commentForm.addEventListener('submit', function (ev) {
+                            ev.preventDefault();
+                            const input = commentForm.elements['comment'];
+                            const text = input.value.trim();
+                            if (!text) return;
+                            addComment(post.id, { id: 'c_' + Date.now(), name: (userId || 'User'), text, ts: Date.now() });
+                            input.value = '';
+                            render();
+                            
+                            // NEW: After commenting, find the list and make sure it's expanded
+                            const commentsList = card.querySelector('.comments-list');
+                            if (commentsList && !commentsList.classList.contains('expanded')) {
+                                commentsList.classList.add('expanded');
+                            }
+                        });
+
+                        feedEl.appendChild(card);
+                    });
+
+                    if (posts.length === 0) {
+                        feedEl.innerHTML = '<div class="text-center text-gray-500">No posts yet — be the first to post.</div>';
+                    }
+                }
+
+                // rating helpers
+                function computeAverage(ratings) {
+                    if (!ratings || ratings.length === 0) return 0;
+                    return ratings.reduce((s, r) => s + r.value, 0) / ratings.length;
+                }
+                function userRated(post, uid) {
+                    const r = (post.ratings || []).find(r => r.userId === uid);
+                    return r ? r.value : 0;
+                }
+                function toggleRating(postId, uid, value) {
+                    const p = posts.find(x => x.id === postId);
+                    if (!p) return;
+                    p.ratings = p.ratings || [];
+                    const existing = p.ratings.find(r => r.userId === uid);
+                    if (existing) {
+                        if (existing.value === value) {
+                            p.ratings = p.ratings.filter(r => r.userId !== uid);
+                        } else {
+                            existing.value = value;
+                        }
+                    } else {
+                        p.ratings.push({ userId: uid, value });
+                    }
+                    savePosts();
+                }
+
+                // comments
+                function addComment(postId, comment) {
+                    const p = posts.find(x => x.id === postId);
+                    if (!p) return;
+                    p.comments = p.comments || [];
+                    p.comments.push(comment);
+                    savePosts();
+                }
+
+                // read file as dataURL (promise)
+                function readFileAsDataURL(file) {
+                    return new Promise((resolve, reject) => {
+                        const fr = new FileReader();
+                        fr.onload = () => resolve(fr.result);
+                        fr.onerror = () => reject(new Error('File read error'));
+                        fr.readAsDataURL(file);
+                    });
+                }
+
+                // preview render
+                function renderPreview() {
+                    previewEl.innerHTML = '';
+                    if (!selectedFiles.length) {
+                        clearAllBtn.classList.add('hidden');
+                        return;
+                    }
+                    clearAllBtn.classList.remove('hidden');
+
+                    // show video(s) first (max 1)
+                    const videos = selectedFiles.filter(f => f.type.startsWith('video/')).slice(0, MAX_VIDEOS);
+                    const images = selectedFiles.filter(f => f.type.startsWith('image/')).slice(0, MAX_IMAGES);
+
+                    videos.forEach((v, idx) => {
+                        const box = document.createElement('div');
+                        box.className = 'relative rounded overflow-hidden shadow-md animate-[fadeIn_200ms_ease]';
+                        box.innerHTML = `
+                <video controls class="w-full max-h-[280px] bg-black"></video>
+                <button data-index="${selectedFiles.indexOf(v)}" class="absolute top-2 right-2 btn btn-xs btn-circle btn-error">✕</button>
+            `;
+                        box.querySelector('video').src = URL.createObjectURL(v);
+                        previewEl.appendChild(box);
+                    });
+
+                    if (images.length) {
+                        const grid = document.createElement('div');
+                        grid.className = 'grid gap-2';
+                        const cols = Math.min(3, images.length);
+                        grid.style.gridTemplateColumns = `repeat(${cols}, minmax(0,1fr))`;
+                        images.forEach(imgFile => {
+                            const idx = selectedFiles.indexOf(imgFile);
+                            const cell = document.createElement('div');
+                            cell.className = 'relative rounded overflow-hidden shadow-sm';
+                            cell.innerHTML = `
+                    <img class="w-full h-28 object-cover transition-transform transform hover:scale-105" />
+                    <button data-index="${idx}" class="absolute top-1 right-1 btn btn-xs btn-circle btn-error">✕</button>
+                `;
+                            cell.querySelector('img').src = URL.createObjectURL(imgFile);
+                            grid.appendChild(cell);
+                        });
+                        previewEl.appendChild(grid);
+                    }
+
+                    // attach remove handlers
+                    previewEl.querySelectorAll('button[data-index]').forEach(btn => {
+                        btn.addEventListener('click', (e) => {
+                            const i = Number(btn.dataset.index);
+                            if (!isNaN(i)) {
+                                selectedFiles.splice(i, 1);
+                                // refresh file input (clear to allow re-select same file later)
+                                fileInput.value = '';
+                                renderPreview();
+                            }
+                        });
+                    });
+                }
+
+                // create post
+                form.addEventListener('submit', async function (ev) {
+                    ev.preventDefault();
+                    const caption = captionEl.value.trim();
+
+                    // validate selection counts & sizes
+                    const imgFiles = selectedFiles.filter(f => f.type.startsWith('image/'));
+                    const vidFiles = selectedFiles.filter(f => f.type.startsWith('video/'));
+
+                    if (imgFiles.length > MAX_IMAGES) { alert('Maximum ' + MAX_IMAGES + ' images allowed.'); return; }
+                    if (vidFiles.length > MAX_VIDEOS) { alert('Maximum ' + MAX_VIDEOS + ' video allowed.'); return; }
+                    const allFiles = selectedFiles;
+                    if (!caption && allFiles.length === 0) { alert('Add caption or media to post.'); return; }
+
+                    for (const f of allFiles) {
+                        if (f.size > MAX_FILE_MB * 1024 * 1024) {
+                            alert('File too large (max ' + MAX_FILE_MB + 'MB each).'); return;
+                        }
+                    }
+
+                    // read all files to data urls
+                    const media = [];
+                    for (const f of allFiles) {
+                        try {
+                            const data = await readFileAsDataURL(f);
+                            media.push({ type: f.type, data });
+                        } catch (err) {
+                            console.error('Failed to read file', err);
+                        }
+                    }
+
+                    const post = {
+                        id: uid(),
+                        ts: Date.now(),
+                        authorId: userId,
+                        authorName: 'You',
+                        caption,
+                        media,
+                        ratings: [],
+                        comments: []
+                    };
+                    posts.push(post);
+                    savePosts();
+                    form.reset();
+                    selectedFiles = [];
+                    fileInput.value = '';
+                    renderPreview();
+                    render();
+                });
+
+                // preview handling when input changes
+                fileInput.addEventListener('change', function () {
+                    const files = Array.from(fileInput.files || []);
+                    // append new selections (allow multiple picks)
+                    selectedFiles = selectedFiles.concat(files);
+
+                    // enforce video count limit by trimming extra videos
+                    const vids = selectedFiles.filter(f => f.type.startsWith('video/'));
+                    if (vids.length > MAX_VIDEOS) {
+                        alert('Only ' + MAX_VIDEOS + ' video allowed. Extra videos were ignored.');
+                        // keep first MAX_VIDEOS videos and all images
+                        const keep = [];
+                        let vCount = 0;
+                        for (const f of selectedFiles) {
+                            if (f.type.startsWith('video/')) {
+                                if (vCount < MAX_VIDEOS) { keep.push(f); vCount++; }
+                            } else {
+                                keep.push(f);
+                            }
+                        }
+                        selectedFiles = keep;
+                    }
+
+                    // enforce image count
+                    const imgs = selectedFiles.filter(f => f.type.startsWith('image/'));
+                    if (imgs.length > MAX_IMAGES) {
+                        alert('Maximum ' + MAX_IMAGES + ' images allowed. Extra images were ignored.');
+                        // keep first MAX_IMAGES images
+                        const keepImages = imgs.slice(0, MAX_IMAGES);
+                        const others = selectedFiles.filter(f => !f.type.startsWith('image/'));
+                        selectedFiles = others.concat(keepImages);
+                    }
+
+                    renderPreview();
+                });
+
+                clearAllBtn.addEventListener('click', function () {
+                    selectedFiles = [];
+                    fileInput.value = '';
+                    renderPreview();
+                });
+
+                // simple escape to prevent HTML injection in comments/captions rendering
+                function escapeHtml(s) {
+                    return (s || '').replace(/[&<>"']/g, function (m) {
+                        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
+                    });
+                }
+
+                // initial render
+                renderPreview();
+                render();
+
+                // expose small API for debugging (optional)
+                window._ev_feed = {
+                    posts, save: savePosts, reload: () => { posts = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); render(); }
+                };
+            })();
+        </script>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const messagesBtn = document.getElementById('messagesBtn');
+            const messagesDropdown = document.getElementById('messagesDropdown');
+            const notificationsBtn = document.getElementById('notificationsBtn');
+            const notificationsDropdown = document.getElementById('notificationsDropdown');
+
+            function toggleDropdown(btn, dropdown) {
+                // First, close the *other* dropdown if it's open
+                if (btn === messagesBtn && !notificationsDropdown.classList.contains('hidden')) {
+                    notificationsDropdown.classList.add('hidden');
+                } else if (btn === notificationsBtn && !messagesDropdown.classList.contains('hidden')) {
+                    messagesDropdown.classList.add('hidden');
+                }
+                // Then, toggle the current one
+                dropdown.classList.toggle('hidden');
+            }
+
+            messagesBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // prevent click from bubbling up to document
+                toggleDropdown(messagesBtn, messagesDropdown);
+            });
+
+            notificationsBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleDropdown(notificationsBtn, notificationsDropdown);
+            });
+
+            // Close dropdowns if clicking anywhere else
+            document.addEventListener('click', (e) => {
+                if (!messagesDropdown.classList.contains('hidden') && !messagesDropdown.contains(e.target)) {
+                    messagesDropdown.classList.add('hidden');
+                }
+                if (!notificationsDropdown.classList.contains('hidden') && !notificationsDropdown.contains(e.target)) {
+                    notificationsDropdown.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
