@@ -5,3 +5,29 @@
 .bangla {
   font-family: "Baloo Da 2", sans-serif;
 }
+
+        /* Style for collapsible comments */
+        .comments-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        .comments-list.expanded {
+            max-height: 1000px;
+            /* A large enough value to show all comments */
+            transition: max-height 0.6s ease-in;
+        }
+
+        /* Animation for new posts fading in */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }

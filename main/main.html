@@ -20,33 +20,6 @@
         href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
 
-    <style>
-        /* Style for collapsible comments */
-        .comments-list {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out;
-        }
-
-        .comments-list.expanded {
-            max-height: 1000px;
-            /* A large enough value to show all comments */
-            transition: max-height 0.6s ease-in;
-        }
-
-        /* Animation for new posts fading in */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
 </head>
 
 <body class="bg-gradient-to-br from-pink-50 to-gray-100">
@@ -158,8 +131,88 @@
         </div>
     </header>
 
-    <main>
-        <section class="max-w-4xl mx-auto py-8 space-y-6">
+    <main class="flex">
+<section class="border border-gray-300 rounded-lg p-6 m-8 w-72 bg-white shadow space-y-6" id="filterBox">
+  
+  <!-- Category -->
+  <div>
+    <h3 class="text-lg font-semibold mb-3">Category</h3>
+    <ul class="space-y-2" id="category">
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-emerald-500 hover:text-white" data-group="category">All</button></li>
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-emerald-500 hover:text-white" data-group="category">Photography</button></li>
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-emerald-500 hover:text-white" data-group="category">Videography</button></li>
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-emerald-500 hover:text-white" data-group="category">Hall</button></li>
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-emerald-500 hover:text-white" data-group="category">Stage Decorator</button></li>
+    </ul>
+  </div>
+
+  <!-- Price -->
+  <div>
+    <h3 class="text-lg font-semibold mb-3">Price</h3>
+    <ul class="space-y-2" id="price">
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-emerald-500 hover:text-white" data-group="price">Any Price</button></li>
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-emerald-500 hover:text-white" data-group="price">20k - 30k</button></li>
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-emerald-500 hover:text-white" data-group="price">30k - 50k</button></li>
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-emerald-500 hover:text-white" data-group="price">50k - 1 Lakh</button></li>
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-emerald-500 hover:text-white" data-group="price">1 Lakh - 2 Lakh</button></li>
+    </ul>
+  </div>
+
+  <!-- Rating -->
+  <div>
+    <h3 class="text-lg font-semibold mb-3">Rating</h3>
+    <ul class="space-y-2" id="rating">
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-yellow-400 hover:text-white" data-group="rating">⭐⭐⭐⭐⭐</button></li>
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-yellow-400 hover:text-white" data-group="rating">⭐⭐⭐⭐</button></li>
+      <li><button class="filter-btn w-full px-4 py-2 rounded bg-gray-100 hover:bg-yellow-400 hover:text-white" data-group="rating">⭐⭐⭐ - ⭐</button></li>
+    </ul>
+  </div>
+
+  <!-- Search Button -->
+  <div>
+    <button id="searchBtn" class="w-full px-4 py-2 rounded bg-emerald-600 text-white font-semibold hover:bg-emerald-700 shadow flex items-center justify-center">
+      <span id="searchText">Search</span>
+      <span id="loadingSpinner" class="hidden ml-2 animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></span>
+    </button>
+  </div>
+
+</section>
+
+<script>
+  // Handle selection
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const group = btn.dataset.group;
+      // Remove active from same group
+      document.querySelectorAll(`.filter-btn[data-group="${group}"]`).forEach(b => {
+        b.classList.remove("bg-emerald-500","text-white");
+        b.classList.add("bg-gray-100");
+      });
+      // Add active to clicked
+      btn.classList.remove("bg-gray-100");
+      btn.classList.add("bg-emerald-500","text-white");
+    });
+  });
+
+  // Handle search button with loading
+  const searchBtn = document.getElementById("searchBtn");
+  const searchText = document.getElementById("searchText");
+  const loadingSpinner = document.getElementById("loadingSpinner");
+
+  searchBtn.addEventListener("click", () => {
+    searchText.textContent = "Searching...";
+    loadingSpinner.classList.remove("hidden");
+
+    // Simulate loading
+    setTimeout(() => {
+      searchText.textContent = "Search";
+      loadingSpinner.classList.add("hidden");
+      alert("Filters applied!");
+    }, 2000);
+  });
+</script>
+
+        <section class="container px-38 pt-8 space-y-8">
             <div
                 class="bg-white rounded-lg shadow p-4 transition-all duration-300 transform hover:scale-[1.01] hover:shadow-lg">
                 <h2 class="text-lg font-semibold mb-2">Create Post</h2>
